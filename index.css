@@ -1,0 +1,22 @@
+/* 1. Define the animation */
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Starts 20px lower */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);    /* Ends at original position */
+  }
+}
+
+/* 2. Apply it to elements */
+.float-in {
+  opacity: 0; /* Hidden before animation starts */
+  animation: floatIn 0.8s ease-out forwards;
+}
+
+/* 3. Optional: Staggered delays so they don't all pop in at once */
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
